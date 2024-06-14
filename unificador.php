@@ -9,9 +9,13 @@ function unirPDFs($archivos, $archivoSalida) {
     foreach ($archivos as $archivo) {
         $paginas = $pdf->setSourceFile($archivo);
         for ($i = 1; $i <= $paginas; $i++) {
-            $pdf->AddPage();
-            $paginaImportada = $pdf->importPage($i);
-            $pdf->useTemplate($paginaImportada);
+            $tplIdx = $pdf->importPage($i);
+            $specs = $pdf->getTemplateSize($tplIdx);
+
+            // Determinar orientación y tamaño
+            $orientation = ($specs['width'] > $specs['height']) ? 'L' : 'P';
+            $pdf->AddPage($orientation, [$specs['width'], $specs['height']]);
+            $pdf->useTemplate($tplIdx, 0, 0, $specs['width'], $specs['height']);
         }
     }
 

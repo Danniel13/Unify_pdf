@@ -19,9 +19,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivos'])) {
 
         if (move_uploaded_file($archivosSubidos['tmp_name'][$i], $rutaArchivo)) {
             $archivos[] = $rutaArchivo;
-        } else {
-            echo "Error al subir el archivo: " . $nombreArchivo;
+        } else 
+        {
+            echo "<script>";
+            echo "alert('Error al subir el archivo: ')";
+            echo "</script>";
             exit;
+            index.html;
+            
+            // echo "Error al subir el archivo: " . $nombreArchivo;
+           
         }
     }
 
@@ -51,9 +58,13 @@ function unirPDFs($archivos, $archivoSalida) {
     foreach ($archivos as $archivo) {
         $paginas = $pdf->setSourceFile($archivo);
         for ($i = 1; $i <= $paginas; $i++) {
-            $pdf->AddPage();
-            $paginaImportada = $pdf->importPage($i);
-            $pdf->useTemplate($paginaImportada);
+            $tplIdx = $pdf->importPage($i);
+            $specs = $pdf->getTemplateSize($tplIdx);
+
+            // Determinar orientación y tamaño
+            $orientation = ($specs['width'] > $specs['height']) ? 'L' : 'P';
+            $pdf->AddPage($orientation, [$specs['width'], $specs['height']]);
+            $pdf->useTemplate($tplIdx, 0, 0, $specs['width'], $specs['height']);
         }
     }
 

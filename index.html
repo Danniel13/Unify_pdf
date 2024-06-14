@@ -4,14 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unificar PDFs</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-image: url('https://public.likeu.co/Nutresa/zafiro/Likeu.jpg'); /* Reemplaza 'ruta/a/tu/imagen-de-fondo.jpg' con la ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: #f0f5f9; /* Color de fondo azul claro */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            width: 30%;
+            max-width: 600px;
+            text-align: center;
+            opacity: 70%;
+           
+            
+        }
+        h1 {
+            color: #333; /* Color del título */
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555; /* Color del texto del label */
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #007bff; /* Color de fondo azul */
+            color: white; /* Color del texto */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Color de fondo azul oscuro al pasar el ratón */
+        }
+    </style>
 </head>
 <body>
-    <h1>Unificador de PDFs</h1>
-    <form action="subir_y_unificar.php" method="post" enctype="multipart/form-data">
-        <label for="archivos">Selecciona archivos PDF:</label>
-        <input type="file" name="archivos[]" id="archivos" multiple accept="application/pdf">
-        <br><br>
-        <input type="submit" value="Unificar PDFs">
-    </form>
+    <div class="container">
+        <h1>Unificador de PDFs</h1>
+        <form action="subir_y_unificar.php" method="post" enctype="multipart/form-data">
+            <label for="archivos">Selecciona archivos PDF:</label>
+            <input type="file" name="archivos[]" id="archivos" multiple accept="application/pdf">
+            <br><br>
+            <input type="submit" value="Unificar PDFs">
+        </form>
+    </div>
 </body>
 </html>
