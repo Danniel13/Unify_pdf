@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unificar PDFs</title>
+</head>
+<body>
+    <h1>Unificador de PDFs</h1>
+    <form action="subir_y_unificar.php" method="post" enctype="multipart/form-data">
+        <label for="archivos">Selecciona archivos PDF:</label>
+        <input type="file" name="archivos[]" id="archivos" multiple accept="application/pdf">
+        <br><br>
+        <input type="submit" value="Unificar PDFs">
+    </form>
+</body>
+</html>

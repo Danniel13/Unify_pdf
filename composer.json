@@ -1,0 +1,15 @@
+{
+    "name": "union/pdf",
+    "description": "union de pdf",
+    "authors": [
+        {
+            "name": "Danni-PC",
+            "email": "danielgz.m@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "setasign/fpdf": "^1.8",
+        "setasign/fpdi": "dev-master"
+    }
+}
