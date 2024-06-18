@@ -62,13 +62,80 @@
 </head>
 <body>
     <div class="container">
-        <h1>Unificador de PDFs</h1>
-        <form action="subir_y_unificar.php" method="post" enctype="multipart/form-data">
-            <label for="archivos">Selecciona archivos PDF:</label>
-            <input type="file" name="archivos[]" id="archivos" multiple accept="application/pdf">
-            <br><br>
-            <input type="submit" value="Unificar PDFs">
-        </form>
-    </div>
+    <h1>Unificador de PDFs</h1>
+    <form id="uploadForm" action="subir_y_unificar.php" method="post" enctype="multipart/form-data">
+        <label for="archivos">Selecciona archivos PDF:</label>
+        <input type="file" name="archivos[]" id="archivos" multiple accept="application/pdf">
+        <input type="hidden" name="orden" id="orden">
+        <br><br>
+        <input type="submit" value="Unificar PDFs">
+        <br><br>
+        <label for="text">Elige el orden en que quieres tus pdf:</label>
+    </form>
+    <ul id="fileList" class="file-list"></ul>
+</div>
+<script>
+    const archivosInput = document.getElementById('archivos');
+    const fileList = document.getElementById('fileList');
+    const ordenInput = document.getElementById('orden');
+
+    archivosInput.addEventListener('change', updateFileList);
+
+    function updateFileList() {
+        fileList.innerHTML = '';
+        Array.from(archivosInput.files).forEach((file, index) => {
+            const li = document.createElement('li');
+            li.textContent = file.name;
+            li.draggable = true;
+            li.dataset.index = index;
+            li.addEventListener('dragstart', handleDragStart);
+            li.addEventListener('dragover', handleDragOver);
+            li.addEventListener('drop', handleDrop);
+            li.addEventListener('dragend', handleDragEnd);
+            fileList.appendChild(li);
+        });
+        updateOrder();
+    }
+
+    function handleDragStart(event) {
+        event.dataTransfer.effectAllowed = 'move';
+        event.dataTransfer.setData('text/plain', event.target.dataset.index);
+        event.target.classList.add('dragging');
+    }
+
+    function handleDragOver(event) {
+        event.preventDefault();
+        event.dataTransfer.dropEffect = 'move';
+    }
+
+    function handleDrop(event) {
+        event.preventDefault();
+        const draggedIndex = event.dataTransfer.getData('text/plain');
+        const targetIndex = event.target.dataset.index;
+        if (draggedIndex !== targetIndex) {
+            const files = Array.from(archivosInput.files);
+            const draggedFile = files.splice(draggedIndex, 1)[0];
+            files.splice(targetIndex, 0, draggedFile);
+
+            // Actualizar el input de archivos con el nuevo orden
+            const dataTransfer = new DataTransfer();
+            files.forEach(file => dataTransfer.items.add(file));
+            archivosInput.files = dataTransfer.files;
+
+            updateFileList();
+        }
+    }
+
+    function handleDragEnd(event) {
+        event.target.classList.remove('dragging');
+    }
+
+    function updateOrder() {
+        const order = Array.from(fileList.children).map(li => li.dataset.index);
+        ordenInput.value = order.join(',');
+    }
+
+    document.getElementById('uploadForm').addEventListener('submit', updateOrder);
+</script>
 </body>
 </html>
