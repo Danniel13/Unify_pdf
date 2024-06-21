@@ -68,6 +68,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivos']) && isset
 } else {
     echo "No se han subido archivos.";
 }
+// try {
+//     unirPDFs($archivos, $archivoSalida);
+// } catch (Exception $e) {
+//     $errorMsg = "Error al unir los PDFs: " . $e->getMessage();
+//     echo "<script>alert('$errorMsg');</script>";
+//     error_log($errorMsg);
+//     exit;
+// }
 
 function unirPDFs($archivos, $archivoSalida) {
     $pdf = new FPDI();
@@ -86,5 +94,7 @@ function unirPDFs($archivos, $archivoSalida) {
     }
 
     $pdf->Output('F', $archivoSalida);
+    ini_set("log_errors", 1);
+    ini_set("error_log", "error_log.txt");
 }
 ?>
