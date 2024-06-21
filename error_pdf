@@ -79,3 +79,64 @@ Stack trace:
   thrown in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php on line 279
 [21-Jun-2024 17:58:40 America/Bogota] ERROR DE PRUEBAS
 [21-Jun-2024 17:59:32 America/Bogota] El archivo funnelReport (6).tsv no es un PDF válido.
+[21-Jun-2024 18:01:03 America/Bogota] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\union_pdf\subir_y_unificar.php on line 22
+[21-Jun-2024 18:01:03 America/Bogota] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\union_pdf\subir_y_unificar.php on line 23
+[21-Jun-2024 18:01:03 America/Bogota] El archivo  no es un PDF válido.
+[21-Jun-2024 18:01:21 America/Bogota] PHP Fatal error:  Uncaught setasign\Fpdi\PdfParser\CrossReference\CrossReferenceException: Unable to find pointer to xref table in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php:304
+Stack trace:
+#0 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(62): setasign\Fpdi\PdfParser\CrossReference\CrossReference->findStartXref()
+#1 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(158): setasign\Fpdi\PdfParser\CrossReference\CrossReference->__construct(Object(setasign\Fpdi\PdfParser\PdfParser), 0)
+#2 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(206): setasign\Fpdi\PdfParser\PdfParser->getCrossReference()
+#3 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(182): setasign\Fpdi\PdfParser\PdfParser->getCatalog()
+#4 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfReader\PdfReader.php(84): setasign\Fpdi\PdfParser\PdfParser->getPdfVersion()
+#5 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(237): setasign\Fpdi\PdfReader\PdfReader->getPdfVersion()
+#6 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(216): setasign\Fpdi\Fpdi->setSourceFileWithParserParams('tmp/Comprobante...')
+#7 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(89): setasign\Fpdi\Fpdi->setSourceFile('tmp/Comprobante...')
+#8 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(61): unirPDFs(Array, 'unificado.pdf')
+#9 {main}
+  thrown in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php on line 304
+[21-Jun-2024 18:01:25 America/Bogota] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\union_pdf\subir_y_unificar.php on line 22
+[21-Jun-2024 18:01:25 America/Bogota] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\union_pdf\subir_y_unificar.php on line 23
+[21-Jun-2024 18:01:25 America/Bogota] El archivo  no es un PDF válido.
+[21-Jun-2024 18:01:43 America/Bogota] PHP Fatal error:  Uncaught setasign\Fpdi\PdfParser\CrossReference\CrossReferenceException: Unable to find pointer to xref table in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php:304
+Stack trace:
+#0 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(62): setasign\Fpdi\PdfParser\CrossReference\CrossReference->findStartXref()
+#1 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(158): setasign\Fpdi\PdfParser\CrossReference\CrossReference->__construct(Object(setasign\Fpdi\PdfParser\PdfParser), 0)
+#2 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(206): setasign\Fpdi\PdfParser\PdfParser->getCrossReference()
+#3 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(182): setasign\Fpdi\PdfParser\PdfParser->getCatalog()
+#4 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfReader\PdfReader.php(84): setasign\Fpdi\PdfParser\PdfParser->getPdfVersion()
+#5 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(237): setasign\Fpdi\PdfReader\PdfReader->getPdfVersion()
+#6 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(216): setasign\Fpdi\Fpdi->setSourceFileWithParserParams('tmp/Comprobante...')
+#7 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(89): setasign\Fpdi\Fpdi->setSourceFile('tmp/Comprobante...')
+#8 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(61): unirPDFs(Array, 'unificado.pdf')
+#9 {main}
+  thrown in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php on line 304
+[21-Jun-2024 18:02:56 America/Bogota] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\union_pdf\subir_y_unificar.php on line 22
+[21-Jun-2024 18:02:56 America/Bogota] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\union_pdf\subir_y_unificar.php on line 23
+[21-Jun-2024 18:02:56 America/Bogota] El archivo  no es un PDF válido.
+[21-Jun-2024 18:03:26 America/Bogota] PHP Fatal error:  Uncaught setasign\Fpdi\PdfParser\CrossReference\CrossReferenceException: Unable to find pointer to xref table in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php:304
+Stack trace:
+#0 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(62): setasign\Fpdi\PdfParser\CrossReference\CrossReference->findStartXref()
+#1 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(158): setasign\Fpdi\PdfParser\CrossReference\CrossReference->__construct(Object(setasign\Fpdi\PdfParser\PdfParser), 0)
+#2 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(206): setasign\Fpdi\PdfParser\PdfParser->getCrossReference()
+#3 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(182): setasign\Fpdi\PdfParser\PdfParser->getCatalog()
+#4 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfReader\PdfReader.php(84): setasign\Fpdi\PdfParser\PdfParser->getPdfVersion()
+#5 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(237): setasign\Fpdi\PdfReader\PdfReader->getPdfVersion()
+#6 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(216): setasign\Fpdi\Fpdi->setSourceFileWithParserParams('tmp/Comprobante...')
+#7 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(89): setasign\Fpdi\Fpdi->setSourceFile('tmp/Comprobante...')
+#8 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(61): unirPDFs(Array, 'unificado.pdf')
+#9 {main}
+  thrown in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php on line 304
+[21-Jun-2024 18:10:23 America/Bogota] PHP Fatal error:  Uncaught setasign\Fpdi\PdfParser\CrossReference\CrossReferenceException: Unable to find pointer to xref table in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php:304
+Stack trace:
+#0 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(62): setasign\Fpdi\PdfParser\CrossReference\CrossReference->findStartXref()
+#1 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(158): setasign\Fpdi\PdfParser\CrossReference\CrossReference->__construct(Object(setasign\Fpdi\PdfParser\PdfParser), 0)
+#2 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(206): setasign\Fpdi\PdfParser\PdfParser->getCrossReference()
+#3 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(182): setasign\Fpdi\PdfParser\PdfParser->getCatalog()
+#4 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfReader\PdfReader.php(84): setasign\Fpdi\PdfParser\PdfParser->getPdfVersion()
+#5 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(237): setasign\Fpdi\PdfReader\PdfReader->getPdfVersion()
+#6 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(216): setasign\Fpdi\Fpdi->setSourceFileWithParserParams('tmp/Comprobante...')
+#7 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(89): setasign\Fpdi\Fpdi->setSourceFile('tmp/Comprobante...')
+#8 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(61): unirPDFs(Array, 'unificado.pdf')
+#9 {main}
+  thrown in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php on line 304
