@@ -2,6 +2,10 @@
 require 'vendor/autoload.php';
 use setasign\Fpdi\Fpdi;
 
+ini_set("log_errors", 1);
+ini_set("error_log", "error_pdf");
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivos']) && isset($_POST['orden'])) {
     $archivosSubidos = $_FILES['archivos'];
     $orden = explode(',', $_POST['orden']);
@@ -22,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivos']) && isset
         if ($tipoArchivo !== 'application/pdf') {
             echo "<script>";
             echo "alert('El archivo $nombreArchivo no es un PDF válido.');";
+            error_log("El archivo $nombreArchivo no es un PDF válido.");
             echo "window.location.href = 'index.html';";
             echo "</script>";
             exit;

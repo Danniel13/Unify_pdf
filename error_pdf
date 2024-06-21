@@ -1,0 +1,81 @@
+[21-Jun-2024 17:48:42 America/Bogota] PHP Fatal error:  Uncaught setasign\Fpdi\PdfParser\CrossReference\CrossReferenceException: This PDF document is encrypted and cannot be processed with FPDI. in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php:279
+Stack trace:
+#0 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(255): setasign\Fpdi\PdfParser\CrossReference\CrossReference->checkForEncryption(Object(setasign\Fpdi\PdfParser\Type\PdfDictionary))
+#1 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(209): setasign\Fpdi\PdfParser\CrossReference\CrossReference->initReaderInstance(Object(setasign\Fpdi\PdfParser\Type\PdfIndirectObject))
+#2 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(67): setasign\Fpdi\PdfParser\CrossReference\CrossReference->readXref(1009942)
+#3 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(158): setasign\Fpdi\PdfParser\CrossReference\CrossReference->__construct(Object(setasign\Fpdi\PdfParser\PdfParser), 0)
+#4 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(206): setasign\Fpdi\PdfParser\PdfParser->getCrossReference()
+#5 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(182): setasign\Fpdi\PdfParser\PdfParser->getCatalog()
+#6 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfReader\PdfReader.php(84): setasign\Fpdi\PdfParser\PdfParser->getPdfVersion()
+#7 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(237): setasign\Fpdi\PdfReader\PdfReader->getPdfVersion()
+#8 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(216): setasign\Fpdi\Fpdi->setSourceFileWithParserParams('tmp/EXTRACTO_01...')
+#9 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(88): setasign\Fpdi\Fpdi->setSourceFile('tmp/EXTRACTO_01...')
+#10 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(60): unirPDFs(Array, 'unificado.pdf')
+#11 {main}
+  thrown in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php on line 279
+[21-Jun-2024 17:50:35 America/Bogota] PHP Fatal error:  Uncaught setasign\Fpdi\PdfParser\CrossReference\CrossReferenceException: This PDF document is encrypted and cannot be processed with FPDI. in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php:279
+Stack trace:
+#0 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(255): setasign\Fpdi\PdfParser\CrossReference\CrossReference->checkForEncryption(Object(setasign\Fpdi\PdfParser\Type\PdfDictionary))
+#1 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(209): setasign\Fpdi\PdfParser\CrossReference\CrossReference->initReaderInstance(Object(setasign\Fpdi\PdfParser\Type\PdfIndirectObject))
+#2 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(67): setasign\Fpdi\PdfParser\CrossReference\CrossReference->readXref(1003973)
+#3 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(158): setasign\Fpdi\PdfParser\CrossReference\CrossReference->__construct(Object(setasign\Fpdi\PdfParser\PdfParser), 0)
+#4 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(206): setasign\Fpdi\PdfParser\PdfParser->getCrossReference()
+#5 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(182): setasign\Fpdi\PdfParser\PdfParser->getCatalog()
+#6 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfReader\PdfReader.php(84): setasign\Fpdi\PdfParser\PdfParser->getPdfVersion()
+#7 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(237): setasign\Fpdi\PdfReader\PdfReader->getPdfVersion()
+#8 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(216): setasign\Fpdi\Fpdi->setSourceFileWithParserParams('tmp/Extracto.pd...')
+#9 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(88): setasign\Fpdi\Fpdi->setSourceFile('tmp/Extracto.pd...')
+#10 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(60): unirPDFs(Array, 'unificado.pdf')
+#11 {main}
+  thrown in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php on line 279
+[21-Jun-2024 17:50:43 America/Bogota] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\union_pdf\subir_y_unificar.php on line 22
+[21-Jun-2024 17:50:43 America/Bogota] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\union_pdf\subir_y_unificar.php on line 23
+[21-Jun-2024 17:51:25 America/Bogota] PHP Fatal error:  Uncaught setasign\Fpdi\PdfParser\CrossReference\CrossReferenceException: This PDF document is encrypted and cannot be processed with FPDI. in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php:279
+Stack trace:
+#0 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(255): setasign\Fpdi\PdfParser\CrossReference\CrossReference->checkForEncryption(Object(setasign\Fpdi\PdfParser\Type\PdfDictionary))
+#1 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(209): setasign\Fpdi\PdfParser\CrossReference\CrossReference->initReaderInstance(Object(setasign\Fpdi\PdfParser\Type\PdfIndirectObject))
+#2 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(67): setasign\Fpdi\PdfParser\CrossReference\CrossReference->readXref(1003973)
+#3 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(158): setasign\Fpdi\PdfParser\CrossReference\CrossReference->__construct(Object(setasign\Fpdi\PdfParser\PdfParser), 0)
+#4 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(206): setasign\Fpdi\PdfParser\PdfParser->getCrossReference()
+#5 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(182): setasign\Fpdi\PdfParser\PdfParser->getCatalog()
+#6 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfReader\PdfReader.php(84): setasign\Fpdi\PdfParser\PdfParser->getPdfVersion()
+#7 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(237): setasign\Fpdi\PdfReader\PdfReader->getPdfVersion()
+#8 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(216): setasign\Fpdi\Fpdi->setSourceFileWithParserParams('tmp/Extracto.pd...')
+#9 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(88): setasign\Fpdi\Fpdi->setSourceFile('tmp/Extracto.pd...')
+#10 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(60): unirPDFs(Array, 'unificado.pdf')
+#11 {main}
+  thrown in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php on line 279
+[21-Jun-2024 17:53:32 America/Bogota] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\union_pdf\subir_y_unificar.php on line 22
+[21-Jun-2024 17:53:32 America/Bogota] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\union_pdf\subir_y_unificar.php on line 23
+[21-Jun-2024 17:53:40 America/Bogota] PHP Fatal error:  Uncaught setasign\Fpdi\PdfParser\CrossReference\CrossReferenceException: This PDF document is encrypted and cannot be processed with FPDI. in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php:279
+Stack trace:
+#0 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(255): setasign\Fpdi\PdfParser\CrossReference\CrossReference->checkForEncryption(Object(setasign\Fpdi\PdfParser\Type\PdfDictionary))
+#1 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(209): setasign\Fpdi\PdfParser\CrossReference\CrossReference->initReaderInstance(Object(setasign\Fpdi\PdfParser\Type\PdfIndirectObject))
+#2 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(67): setasign\Fpdi\PdfParser\CrossReference\CrossReference->readXref(1003973)
+#3 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(158): setasign\Fpdi\PdfParser\CrossReference\CrossReference->__construct(Object(setasign\Fpdi\PdfParser\PdfParser), 0)
+#4 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(206): setasign\Fpdi\PdfParser\PdfParser->getCrossReference()
+#5 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(182): setasign\Fpdi\PdfParser\PdfParser->getCatalog()
+#6 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfReader\PdfReader.php(84): setasign\Fpdi\PdfParser\PdfParser->getPdfVersion()
+#7 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(237): setasign\Fpdi\PdfReader\PdfReader->getPdfVersion()
+#8 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(216): setasign\Fpdi\Fpdi->setSourceFileWithParserParams('tmp/Extracto.pd...')
+#9 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(88): setasign\Fpdi\Fpdi->setSourceFile('tmp/Extracto.pd...')
+#10 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(60): unirPDFs(Array, 'unificado.pdf')
+#11 {main}
+  thrown in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php on line 279
+[21-Jun-2024 17:54:43 America/Bogota] PHP Fatal error:  Uncaught setasign\Fpdi\PdfParser\CrossReference\CrossReferenceException: This PDF document is encrypted and cannot be processed with FPDI. in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php:279
+Stack trace:
+#0 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(255): setasign\Fpdi\PdfParser\CrossReference\CrossReference->checkForEncryption(Object(setasign\Fpdi\PdfParser\Type\PdfDictionary))
+#1 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(209): setasign\Fpdi\PdfParser\CrossReference\CrossReference->initReaderInstance(Object(setasign\Fpdi\PdfParser\Type\PdfIndirectObject))
+#2 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php(67): setasign\Fpdi\PdfParser\CrossReference\CrossReference->readXref(1003973)
+#3 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(158): setasign\Fpdi\PdfParser\CrossReference\CrossReference->__construct(Object(setasign\Fpdi\PdfParser\PdfParser), 0)
+#4 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(206): setasign\Fpdi\PdfParser\PdfParser->getCrossReference()
+#5 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\PdfParser.php(182): setasign\Fpdi\PdfParser\PdfParser->getCatalog()
+#6 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfReader\PdfReader.php(84): setasign\Fpdi\PdfParser\PdfParser->getPdfVersion()
+#7 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(237): setasign\Fpdi\PdfReader\PdfReader->getPdfVersion()
+#8 C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\FpdiTrait.php(216): setasign\Fpdi\Fpdi->setSourceFileWithParserParams('tmp/Extracto.pd...')
+#9 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(88): setasign\Fpdi\Fpdi->setSourceFile('tmp/Extracto.pd...')
+#10 C:\xampp\htdocs\union_pdf\subir_y_unificar.php(60): unirPDFs(Array, 'unificado.pdf')
+#11 {main}
+  thrown in C:\xampp\htdocs\union_pdf\vendor\setasign\fpdi\src\PdfParser\CrossReference\CrossReference.php on line 279
+[21-Jun-2024 17:58:40 America/Bogota] ERROR DE PRUEBAS
+[21-Jun-2024 17:59:32 America/Bogota] El archivo funnelReport (6).tsv no es un PDF válido.
