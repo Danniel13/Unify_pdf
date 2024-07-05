@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivos']) && isset
         $nombreArchivo = $archivosSubidos['name'][$i];
         $tipoArchivo = $archivosSubidos['type'][$i];
         $rutaArchivo = $rutaTemporal . basename($nombreArchivo);
-
+        //Valida si es PDF o tiene otra extension:
         if ($tipoArchivo !== 'application/pdf') {
             echo "<script>";
             echo "alert('El archivo $nombreArchivo no es un PDF válido.');";
@@ -39,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivos']) && isset
             echo "alert('Error al subir el archivo: $nombreArchivo');";
             echo "window.location.href = 'index.html';";
             echo "</script>";
+            error_log("Error al subir archivos $nombreArchivo por: permisos insuficienes en carpetas/archivos-----archivo demasiado pesado-----archivo con caracteres no validos - espacio en disco insuficiente --");
             exit;
         }
     }
@@ -47,16 +48,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivos']) && isset
     foreach ($archivos as $archivo) {
         if (!file_exists($archivo) || filesize($archivo) === 0) {
             echo "<script>";
-            echo "alert('El archivo $archivo está corrupto o vacío.');";
+            echo "alert('El archivo $nombreArchivo está corrupto o vacío.');";
             echo "window.location.href = 'index.html';";
             echo "</script>";
+            error_log("Archivo vacio o corrupto: $nombreArchivo");
             exit;
         }
     }
 
     // Nombre del archivo PDF resultante
     $archivoSalida = 'unificado.pdf';
-
+    try {
+         
     // Unir los PDFs
     unirPDFs($archivos, $archivoSalida);
 
@@ -64,6 +67,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivos']) && isset
     header('Content-Type: application/pdf');
     header('Content-Disposition: attachment; filename="' . basename($archivoSalida) . '"');
     readfile($archivoSalida);
+} catch (Exception $e) {
+    //echo "Excepción capturada: " . $e->getMessage();
+    echo "<script>";
+            echo "alert('Uno o mas archivos tienen conflicto, Comunicate con Soporte');";
+            echo "window.location.href = 'index.html';";
+            echo "</script>";
+            error_log("La union de los archivos que contiene $nombreArchivo   tiene problemas");
+            array_map('unlink', glob("tmp/*"));
+            exit;
+            
+            
+}   
+
 
     // Eliminar archivos temporales
     foreach ($archivos as $archivo) {
@@ -99,6 +115,7 @@ function unirPDFs($archivos, $archivoSalida) {
     }
 
     $pdf->Output('F', $archivoSalida);
+    error_log("Se unieron pdf correctamente $nombreArchivo");
     ini_set("log_errors", 1);
     ini_set("error_log", "error_log.txt");
 }

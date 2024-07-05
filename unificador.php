@@ -5,7 +5,11 @@ use setasign\Fpdi\Fpdi;
 
 function unirPDFs($archivos, $archivoSalida) {
     $pdf = new FPDI();
-
+    try {
+        //code...
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
     foreach ($archivos as $archivo) {
         $paginas = $pdf->setSourceFile($archivo);
         for ($i = 1; $i <= $paginas; $i++) {
