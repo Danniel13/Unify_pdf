@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="icon" href="http://localhost/Unify_pdf/liklogo.ico" type="image/x-icon">
+    <link rel="icon" href="http://localhost/Unify_pdf/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unificar PDFs</title>
     <style>
+
+        @font-face {
+        font-family: 'Telegraf';
+        src: url('fonts/PPTelegraf-Regular.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+         }
+
+        @font-face {
+        font-family: 'Telegraf';
+        src: url('fonts/Telegraf-Bold.otf') format('opentype');
+        font-weight: bold;
+        font-style: normal;
+         }
+       
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+            font-family: 'Telegraf', sans-serif;
             background-image: url('https://public.likeu.co/Nutresa/zafiro/Likeu.jpg'); 
             background-size: cover;
             background-position: center;
@@ -47,6 +63,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            font-size: small;
+            
             
         }
 
@@ -64,6 +82,7 @@
         }
         input[type="file"] {
             margin-bottom: 10px;
+            font-family: 'Telegraf', sans-serif;
         }
         input[type="submit"] {
             background-color: #007bff; /* Color de fondo azul */
@@ -74,6 +93,7 @@
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            
         }
         input[type="submit"]:hover {
             background-color: #0056b3; /* Color de fondo azul oscuro al pasar el ratón */

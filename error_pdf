@@ -238,3 +238,12 @@ Stack trace:
 [04-Jul-2024 19:54:30 America/Bogota] La union de los archivos que contiene Pago 300k alkosto.pdf   tiene problemas
 [04-Jul-2024 20:00:16 America/Bogota] PHP Warning:  Undefined variable $nombreArchivo in C:\xampp\htdocs\Unify_pdf\subir_y_unificar.php on line 118
 [04-Jul-2024 20:00:16 America/Bogota] Se unieron pdf correctamente 
+[09-Jul-2024 16:22:45 America/Bogota] PHP Warning:  Undefined variable $nombreArchivo in C:\xampp\htdocs\Unify_pdf\subir_y_unificar.php on line 118
+[09-Jul-2024 16:22:45 America/Bogota] Se unieron pdf correctamente 
+[09-Jul-2024 16:24:22 America/Bogota] PHP Warning:  Undefined variable $nombreArchivo in C:\xampp\htdocs\Unify_pdf\subir_y_unificar.php on line 118
+[09-Jul-2024 16:24:22 America/Bogota] Se unieron pdf correctamente 
+[09-Jul-2024 17:28:36 America/Bogota] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\Unify_pdf\subir_y_unificar.php on line 22
+[09-Jul-2024 17:28:36 America/Bogota] PHP Warning:  Undefined array key "" in C:\xampp\htdocs\Unify_pdf\subir_y_unificar.php on line 23
+[09-Jul-2024 17:28:36 America/Bogota] El archivo  no es un PDF válido.
+[09-Jul-2024 17:32:07 America/Bogota] PHP Warning:  Undefined variable $nombreArchivo in C:\xampp\htdocs\Unify_pdf\subir_y_unificar.php on line 118
+[09-Jul-2024 17:32:07 America/Bogota] Se unieron pdf correctamente 
