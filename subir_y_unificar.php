@@ -115,7 +115,7 @@ function unirPDFs($archivos, $archivoSalida) {
     }
 
     $pdf->Output('F', $archivoSalida);
-    error_log("Se unieron pdf correctamente $nombreArchivo");
+    error_log("Se unieron pdf correctamente $archivoSalida");
     ini_set("log_errors", 1);
     ini_set("error_log", "error_log.txt");
 }

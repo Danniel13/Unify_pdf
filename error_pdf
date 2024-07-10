@@ -247,3 +247,10 @@ Stack trace:
 [09-Jul-2024 17:28:36 America/Bogota] El archivo  no es un PDF válido.
 [09-Jul-2024 17:32:07 America/Bogota] PHP Warning:  Undefined variable $nombreArchivo in C:\xampp\htdocs\Unify_pdf\subir_y_unificar.php on line 118
 [09-Jul-2024 17:32:07 America/Bogota] Se unieron pdf correctamente 
+[09-Jul-2024 18:08:53 America/Bogota] PHP Warning:  Undefined variable $nombreArchivo in C:\xampp\htdocs\Unify_pdf\subir_y_unificar.php on line 118
+[09-Jul-2024 18:08:53 America/Bogota] Se unieron pdf correctamente 
+[09-Jul-2024 18:13:06 America/Bogota] PHP Warning:  Undefined variable $nombreArchivo in C:\xampp\htdocs\Unify_pdf\subir_y_unificar.php on line 118
+[09-Jul-2024 18:13:06 America/Bogota] Se unieron pdf correctamente 
+[09-Jul-2024 18:14:11 America/Bogota] Se unieron pdf correctamente unificado.pdf
+[09-Jul-2024 19:02:08 America/Bogota] Se unieron pdf correctamente unificado.pdf
+[09-Jul-2024 19:02:33 America/Bogota] La union de los archivos que contiene Planilla Mayo 24.pdf   tiene problemas
